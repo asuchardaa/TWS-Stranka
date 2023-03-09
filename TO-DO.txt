@@ -4,3 +4,6 @@ TODO LIST
 - scroll down tlačítko na hlavní stránku
 - karty na hlavní stránce
 - responzivita
+- media??
+- audio
+- figure
