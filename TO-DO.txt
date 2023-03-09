@@ -3,3 +3,4 @@ TODO LIST
 - zápatí
 - scroll down tlačítko na hlavní stránku
 - karty na hlavní stránce
+- responzivita
