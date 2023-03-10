@@ -18,7 +18,7 @@
         <div class="logo"><a href="index.html">TWS SP</a></div>
         <ul class="links">
             <li><a href="index.html">DOMŮ</a></li>
-            <li><a href="about-us.html">O NÁS</a></li>
+            <li><a href="galery.html">GALERIE</a></li>
             <li><a href="products.html">PRODUKTY</a></li>
             <li><a href="contact.html">KONTAKT</a></li>
         </ul>
@@ -29,7 +29,7 @@
     </div>
     <div class="drop-menu">
         <li><a href="index.html">DOMŮ</a></li>
-        <li><a href="about-us.html">O NÁS</a></li>
+        <li><a href="galery.html">GALERIE</a></li>
         <li><a href="products.html">PRODUKTY</a></li>
         <li><a href="contact.html">KONTAKT</a></li>
         <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="action_btn">Kouzelné tlačítko</a></li>
@@ -42,9 +42,15 @@
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
+<div class="your-location">
+    <h1 class="status"></h1>
+    <button class="find-state">Zjistit svojí polohu</button>
+    <script src="js/geolocation.js"></script>
+</div>
+<hr class="line">
 <section class="contact-us">
     <div class="contact-col">
-        <form>
+        <form id="contact-form" onsubmit="return validateForm()">
             <fieldset>
                 <legend>Kontaktuj nás</legend>
                 <label for="jmeno">Jméno:</label>
@@ -75,8 +81,9 @@
         <a href="https://github.com/asuchardaa" class="fa-brands fa-github"></a>
         <a href="https://open.spotify.com/user/21g355ayvqjnkl7lgkx3t6o4a" class="fa fa-spotify"></a>
     </div>
-    <p>Made by Adam Sucharda</p>
+    <p>© 2023 Adam Sucharda</p>
 </section>
+<script src="./js/validation.js"></script>
 <script src="./js/drop_menu.js"></script>
 </body>
 </html>

@@ -16,7 +16,8 @@ li {
 a {
     text-decoration: none;
     color: #fff;
-    font-size: 1rem;
+    font-size: 22px;
+    font-weight: 500;
 }
 
 p {
@@ -470,7 +471,7 @@ header {
 }
 
 .products-col a.odkaz2\"{
-    color: #f00;
+    color: #ff4336;
     text-decoration: none;
     font-weight: 300;
     font-size: 14px;
@@ -478,11 +479,15 @@ header {
 }
 
 .products-col a.odkaz2\":hover {
-    text-decoration: underline; /* Add underline on hover */
+    text-decoration: underline;
+}
+
+.products-col a.odkaz2\":visited {
+    color: violet;
 }
 
 .products-text .odkaz:visited {
-    color: purple;
+    color: violet;
 }
 
 .products-text .odkaz:link {
@@ -490,17 +495,13 @@ header {
     font-weight: bold;
     display: inline-block;
     text-decoration: none;
-    color: blue;
+    color: #ff4336;
     font-size: 13px;
     margin-top: 20px;
 }
 
 .products-text .odkaz:hover {
     text-decoration: underline;
-}
-
-.products-text .odkaz:active {
-    background-color: #ff4336;
 }
 
 @media only screen and (min-width: 768px) {
@@ -655,7 +656,7 @@ hr {
 /*---zahlavi----*/
 .zapati {
     width: 100%;
-    text-align: center;
+    /*text-align: center;*/
     padding: 30px 0 10px 0;
     display: flex;
     flex-direction: column;
@@ -671,11 +672,13 @@ hr {
 .zapati p {
     display: block;
     margin: 0;
+    justify-content: center;
 }
 
 .ikony {
-    justify-content: center;
-    display: flex;
+    padding-right: 30px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .fa-facebook, .fa-instagram, .fa-twitter, .fa-spotify, .fa-github {
@@ -873,4 +876,97 @@ hr {
 
 .grid-container h1 {
     margin: 0;
+}
+
+.your-location {
+    text-align: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.your-location .find-state {
+    display: inline-block;
+    text-decoration: none;
+    color: #ff4336;
+    border: 1px solid #ff4336;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin: 0 5px;
+    flex-grow: 1;
+    max-width: 150px;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.your-location .find-state:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1.5s;
+    color: white;
+}
+
+.gallery {
+    margin: 0 auto;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.gallery h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.gallery-column {
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figure video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+figcaption audio {
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .gallery-grid {
+        flex-direction: column;
+    }
+
+    .gallery-column {
+        flex-basis: 100%;
+        padding: 10px;
+    }
 }

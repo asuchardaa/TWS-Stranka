@@ -1,7 +1,5 @@
 TODO LIST
-
-- media??
-- audio
-- figure
-- video -> leafleet ?
 - .htaccess
+- validace každého HTML do zápatí
+- validace CSS do zápatí indexu
+- online audit
