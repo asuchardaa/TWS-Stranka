@@ -165,8 +165,9 @@ header {
 .tlacitka {
     display: flex;
     justify-content: center;
-    width: 22%;
-    margin: 0 10px;
+    width: 100%;
+    max-width: 500px; /* Set maximum width for container */
+    margin: 0 auto;
     padding-top: 30px;
 }
 
@@ -180,13 +181,32 @@ header {
     background: transparent;
     position: relative;
     cursor: pointer;
-    margin: 0 10px;
+    margin: 0 5px; /* Decrease margin */
+    flex-grow: 1; /* Make both buttons grow equally */
+    max-width: 150px; /* Set maximum width for each button */
+    box-sizing: border-box; /* Include padding in max-width calculation */
 }
 
 .hero-btn:hover {
     border: 1px solid #f44336;
     background: #f44336;
     transition: 1.5s;
+}
+
+@media (min-width: 768px) {
+    .tlacitka {
+        width: 50%;
+    }
+
+    .hero-btn {
+        margin: 0 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .tlacitka {
+        width: 33.33%;
+    }
 }
 
 /* Responsive */
@@ -251,28 +271,21 @@ header {
     display: block;
 }
 
-/*.contact-us {*/
-/*    width: 80%;*/
-/*    margin: 50px 250px;*/
-/*}*/
-
 /* formulář */
 .contact-col {
-    width: 65%;
-    max-width: 1300px;
+    width: 100%;
+    max-width: 1200px;
     margin: auto;
-    padding: 80px 0;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-col form {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    max-width: 900px;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 15px;
@@ -280,60 +293,39 @@ header {
 
 .contact-col fieldset {
     position: relative;
-    width: 100%;
     border: none;
-    max-width: 1500px;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    padding: 0;
+    margin: 0;
 }
 
 .contact-col legend {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: bold;
     text-align: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 30px;
+    display: block;
 }
 
 .contact-col label {
-    display: inline-block;
-    /*margin-bottom: 5px;*/
-    margin: 0 15px 10px 5px;
+    display: block;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
-.contact-col input[type="text"], input[type="email"] {
+.contact-col input[type="tel"], input[type="text"], input[type="email"], .contact-col textarea, contact-col input[type="date"] {
     padding: 15px;
-    /*margin-bottom: 10px;*/
-    margin: 10px 15px 10px 5px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 3px;
     box-sizing: border-box;
     width: 100%;
-}
-
-.contact-col textarea {
-    padding: 15px;
     resize: none;
-    margin: 10px 15px 10px 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    width: 100%;
 }
 
 .contact-col input[type="date"] {
-    padding: 15px;
-    margin: 10px 15px 10px 5px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 300px;
-    font-size: 15px;
-    resize: none;
+    max-width: 250px;
 }
 
 .contact-col input[type="submit"] {
@@ -343,7 +335,7 @@ header {
     border: 1px solid #ff4336;
     border-radius: 3px;
     padding: 12px 34px;
-    margin: 0px 15px 20px 5px;
+    margin: 20px auto 0;
     font-size: 13px;
     background: transparent;
     position: relative;
@@ -360,21 +352,25 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-    form {
-        flex-direction: row;
-        justify-content: center;
+    .contact-col form {
+        padding: 50px;
     }
 
-    label, input, textarea {
-        margin: 10px;
+    .contact-col label {
+        margin-right: 20px;
+        margin-bottom: 0;
+        display: inline-block;
     }
 
-    label, button {
-        flex-basis: 25%;
+    .contact-col input[type="text"],
+    .contact-col input[type="email"],
+    .contact-col textarea,
+    .contact-col input[type="date"] {
+        margin-bottom: 30px;
     }
 
-    input, textarea {
-        flex-basis: 50%;
+    .contact-col input[type="submit"] {
+        margin-top: 0;
     }
 }
 
@@ -382,6 +378,7 @@ header {
 
 .products-text {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     width: 80%;
@@ -391,21 +388,24 @@ header {
 }
 
 .products-col {
-    flex-basis: 48%;
+    width: 100%;
     padding: 30px 2px;
 }
 
 .products-col img {
     width: 100%;
+    margin-top: 20px;
 }
 
 .products-col h1 {
     padding-top: 0;
+    font-size: 36px;
 }
 
 .products-col p {
     padding: 15px 0 35px;
     font-weight: 300;
+    font-size: 14px;
     justify-content: space-between;
 }
 
@@ -434,15 +434,62 @@ header {
     justify-content: center;
     color: black;
     font-style: italic;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-.products-text a {
+@media only screen and (min-width: 768px) {
+    .products-text {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 11px;
+        align-items: flex-start;
+    }
+
+    .products-col {
+        width: 48%
+    }
+
+    .products-col:first-child {
+        margin-right: 4%;
+    }
+
+    .products-col:last-child {
+        margin-left: 4%;
+    }
+
+    .products-col img {
+        margin-top: 0;
+    }
+}
+
+.products-text .odkaz:link {
     font-style: italic;
     font-weight: bold;
     display: inline-block;
     text-decoration: none;
     color: blue;
     font-size: 13px;
+    margin-top: 20px;
+}
+
+.products-text .odkaz:visited {
+    color: purple;
+}
+
+.products-text .odkaz:hover {
+    text-decoration: underline;
+}
+
+.products-text .odkaz:active {
+    background-color: #ff4336;
+}
+
+@media only screen and (min-width: 768px) {
+    .products-text a {
+        display: inline-block;
+        margin-top: 0;
+    }
 }
 
 .seznamy {
@@ -513,22 +560,47 @@ hr {
     list-style-type: circle;
 }
 
+@media (max-width: 768px) {
+    .seznamy {
+        flex-direction: column;
+        width: 40%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        align-items: center;
+    }
+
+    .seznamy-sloupce {
+        width: 100%;
+    }
+
+    .seznamy-sloupce ol,
+    .seznamy-sloupce ul {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .seznamy-sloupce ol li,
+    .seznamy-sloupce ul li {
+        margin-left: 20px;
+        text-indent: -20px;
+    }
+}
+
 .tabulka {
-    padding: 100px 0;
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
+    padding: 80px 0;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .tabulka table {
     padding-top: 250px;
     border-collapse: collapse;
-    width: 100%;
 }
 
 .tabulka th, .tabulka td {
     border: 1px solid black;
     padding: 5px;
+    text-align: center;
 }
 
 .tabulka th {
@@ -548,6 +620,43 @@ hr {
     font-size: 24px;
 }
 
+@media only screen and (max-width: 600px) {
+    .tabulka th, .tabulka td {
+        font-size: 14px;
+        padding: 2px;
+        margin: 0 auto;
+    }
 
+    .tabulka caption {
+        font-size: 20px;
+        padding: 5px;
+        margin: 0 auto;
+    }
+}
 
+/*---zahlavi----*/
+.zahlavi {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
 
+.zahlavi h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.fa-facebook, .fa-instagram, .fa-twitter, .fa-spotify, .fa-github {
+    color: #f44336;
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%
+}
+
+.fa-facebook:hover, .fa-instagram:hover, .fa-twitter:hover, .fa-spotify:hover, .fa-youtube:hover {
+    opacity: 0.7;
+}

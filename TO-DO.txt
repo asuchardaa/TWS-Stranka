@@ -8,3 +8,4 @@ TODO LIST
 - audio
 - figure
 - video -> leafleet ?
+- svg logo- .htaccess
