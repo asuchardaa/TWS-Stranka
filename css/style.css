@@ -87,16 +87,16 @@ header {
     font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
-    transition: scale 0.2s ease;
+    transition: 0.2s ease;
 }
 
 .action_btn:hover {
-    scale: 1.05;
     color: #ffffff;
+    transform: scale(1.05);
 }
 
 .action_btn:active {
-    scale: 0.95;
+    transform: scale(1.05);
 }
 
 /* Drop menu */
@@ -275,7 +275,7 @@ header {
     width: 100%;
 }
 
-.location h1 {
+.location h2 {
     font-size: 36px;
     font-weight: 600;
     text-align: center;
@@ -285,6 +285,13 @@ header {
 }
 
 /* formulář */
+.contact-us h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    padding-top: 40px;
+}
+
+
 .contact-col {
     width: 100%;
     max-width: 1200px;
@@ -476,7 +483,7 @@ header {
     }
 }
 
-.products-col a.odkaz2\" {
+.products-col a.odkaz2 {
     color: #ff4336;
     text-decoration: none;
     font-weight: 300;
@@ -484,11 +491,11 @@ header {
     justify-content: space-between;
 }
 
-.products-col a.odkaz2\":hover {
+.products-col a.odkaz2:hover {
     text-decoration: underline;
 }
 
-.products-col a.odkaz2\":visited {
+.products-col a.odkaz2:visited {
     color: violet;
 }
 
@@ -517,16 +524,6 @@ header {
     }
 }
 
-.seznamy {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
 hr {
     border: 0;
     border-bottom: 1px solid gainsboro;
@@ -537,23 +534,36 @@ hr {
     margin: auto;
 }
 
+/*---SEZNAMY---*/
+.seznamy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto 380px;
+    /*padding-top: 80px;*/
+    /*padding-bottom: 80px;*/
+    padding: 80px 0;
+}
+
 .seznamy-sloupce {
     width: 45%;
     justify-content: center;
     display: flex;
+    flex-direction: column;
 }
 
-.seznamy-sloupce ol {
-    width: 50%;
+.seznamy-sloupce ol, .seznamy-sloupce ul {
+    width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 20px;
 }
 
 .seznamy h3 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    padding-right: 50px;
+    margin: 0 auto 20px;
+    /*text-align: center;*/
+    padding-right: 450px;
 }
 
 .seznamy-sloupce ol li {
@@ -566,15 +576,9 @@ hr {
     list-style-position: inside;
 }
 
-.seznamy-sloupce ul {
-    width: 50%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-left: 20px;
-}
-
 .seznamy-sloupce li {
     margin-bottom: 10px;
+    padding-left: 30px;
 }
 
 .seznamy-sloupce ol ol li {
@@ -592,6 +596,7 @@ hr {
         padding-top: 40px;
         padding-bottom: 40px;
         align-items: center;
+        margin: auto;
     }
 
     .seznamy-sloupce {
@@ -604,6 +609,10 @@ hr {
         padding-left: 0;
     }
 
+    .seznamy h3 {
+        padding-top: 50px;
+    }
+
     .seznamy-sloupce ol li,
     .seznamy-sloupce ul li {
         margin-left: 20px;
@@ -612,9 +621,16 @@ hr {
 }
 
 .tabulka {
-    padding: 80px 0;
+    padding: 15px 30px 80px 30px;
     max-width: 600px;
     margin: 0 auto;
+}
+
+.tabulka h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
 }
 
 .tabulka table {
@@ -681,6 +697,40 @@ hr {
     justify-content: center;
 }
 
+.zapati a {
+
+}
+
+.zapati a.odkaz2 {
+    color: #ff4336;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.zapati  a.odkaz2:hover {
+    text-decoration: underline;
+}
+
+.zapati  a.odkaz2:visited {
+    color: #ff4336;
+}
+
+.zapati  .odkaz:visited {
+    color: #ff4336;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .zapati p {
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+
+}
+
 .ikony {
     padding-right: 30px;
     align-items: center;
@@ -717,7 +767,7 @@ hr {
 .card {
     font-family: 'Heebo', serif;
     --bg-filter-opacity: 0.5;
-    background-image: linear-gradient(rgba(0, 0, 0, var(--bg-filter-opacity)), rgba(0, 0, 0, var(--bg-filter-opacity))), var(--bg-img);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--bg-img);
     height: 20em;
     width: 15em;
     font-size: 1.5em;
@@ -741,7 +791,7 @@ hr {
     z-index: 1;
 }
 
-.card h1 {
+.card h2 {
     margin: 0;
     font-size: 1.5em;
     line-height: 1.2em;
@@ -826,8 +876,8 @@ hr {
     }
 
     .card-grid-space .num {
-    / margin-left: 0;
-    / text-align: center;
+        margin-left: 0;
+        text-align: center;
     }
 }
 

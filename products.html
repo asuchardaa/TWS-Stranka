@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <title>TWS SWP - Produkty</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-          integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
           rel="stylesheet">
@@ -19,7 +15,7 @@
         <div class="logo"><a href="index.html">TWS SP</a></div>
         <ul class="links">
             <li><a href="index.html">DOMŮ</a></li>
-            <li><a href="galery.html">GALERIE</a></li>
+            <li><a href="gallery.html">GALERIE</a></li>
             <li><a href="products.html">PRODUKTY</a></li>
             <li><a href="contact.html">KONTAKT</a></li>
         </ul>
@@ -29,11 +25,23 @@
         </div>
     </div>
     <div class="drop-menu">
-        <li><a href="index.html">DOMŮ</a></li>
-        <li><a href="galery.html">GALERIE</a></li>
-        <li><a href="products.html">PRODUKTY</a></li>
-        <li><a href="contact.html">KONTAKT</a></li>
-        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="action_btn">Kouzelné tlačítko</a></li>
+        <ul>
+            <li>
+                <a href="index.html">DOMŮ</a>
+            </li>
+            <li>
+                <a href="gallery.html">GALERIE</a>
+            </li>
+            <li>
+                <a href="products.html">PRODUKTY</a>
+            </li>
+            <li>
+                <a href="contact.html">KONTAKT</a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="action_btn">Kouzelné tlačítko</a>
+            </li>
+        </ul>
     </div>
     <h1>Produkty</h1>
 </section>
@@ -44,7 +52,8 @@
             Alias dignissimos distinctio ea enim iste laudantium nesciunt odio pariatur quia voluptates.
             Architecto debitis dolores facilis labore laboriosam natus neque voluptate voluptatibus?
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut blanditiis culpa d
-            gnissimos eaque <a href="https://www.lipsum.com/" target="_blank" rel="noopener" class=odkaz2">eveniet fuga</a> harum ipsam
+            gnissimos eaque <a href="https://www.lipsum.com/" target="_blank" rel="noopener" class="odkaz2">eveniet
+                fuga</a> harum ipsam
             ipsum iste necessitatibus, r
             atione repellat saepe sequi similique, tempora voluptates. Hic, mollitia!
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, autem,
@@ -56,12 +65,13 @@
             suscipit? Dicta doloribus error eveniet explicabo illum nisi odio odit velit?
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
             eius ipsam magni perferendis placeat praesentium rerum similique voluptas.
-            <a href="https://loremipsum.io/" target="_blank" rel="noopener" class=odkaz2">Assumenda</a> commodi c ulpa debitis explicabo, fuga iste itaque perferendis quam
+            <a href="https://loremipsum.io/" target="_blank" rel="noopener" class="odkaz2">Assumenda</a> commodi c ulpa
+            debitis explicabo, fuga iste itaque perferendis quam
             sunt voluptas?</p>
         <a href="" class="hero-btn">ZJISTI VÍCE</a>
     </div>
     <div class="products-col">
-        <img src="images/universe.jpg">
+        <img src="./images/universe.jpg" alt="universe image">
         <h5>Zdroj: <a href="https://wallpapercave.com/" target="_blank" rel="noopener"
                       class="odkaz">wallpapercave.com</a></h5>
     </div>
@@ -69,8 +79,8 @@
 <hr class="line">
 <section class="seznamy">
     <div class="seznamy-sloupce">
+        <h3>Číslovaný seznam</h3>
         <ol>
-            <h3>Číslovaný seznam</h3>
             <li>První položka
                 <ol>
                     <li>Podpoložka 1</li>
@@ -91,10 +101,9 @@
             <li>Sedmá položka</li>
         </ol>
     </div>
-
     <div class="seznamy-sloupce">
+        <h3>Nečíslovaný seznam</h3>
         <ul>
-            <h3>Nečíslovaný seznam</h3>
             <li>První položka
                 <ul>
                     <li>Podpoložka 1</li>
@@ -118,6 +127,7 @@
 </section>
 <hr class="line">
 <section class="tabulka">
+    <h2>Tabulka</h2>
     <table>
         <caption>Seznam účastníků</caption>
         <thead>

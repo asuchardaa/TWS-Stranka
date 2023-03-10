@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>TWS SP - Kontakt</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-          integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/53c596c8c0.js" crossorigin="anonymous"></script>
@@ -18,7 +14,7 @@
         <div class="logo"><a href="index.html">TWS SP</a></div>
         <ul class="links">
             <li><a href="index.html">DOMŮ</a></li>
-            <li><a href="galery.html">GALERIE</a></li>
+            <li><a href="gallery.html">GALERIE</a></li>
             <li><a href="products.html">PRODUKTY</a></li>
             <li><a href="contact.html">KONTAKT</a></li>
         </ul>
@@ -28,27 +24,40 @@
         </div>
     </div>
     <div class="drop-menu">
-        <li><a href="index.html">DOMŮ</a></li>
-        <li><a href="galery.html">GALERIE</a></li>
-        <li><a href="products.html">PRODUKTY</a></li>
-        <li><a href="contact.html">KONTAKT</a></li>
-        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="action_btn">Kouzelné tlačítko</a></li>
+        <ul>
+            <li>
+                <a href="index.html">DOMŮ</a>
+            </li>
+            <li>
+                <a href="gallery.html">GALERIE</a>
+            </li>
+            <li>
+                <a href="products.html">PRODUKTY</a>
+            </li>
+            <li>
+                <a href="contact.html">KONTAKT</a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="action_btn">Kouzelné tlačítko</a>
+            </li>
+        </ul>
     </div>
     <h1>Kontaktuj nás</h1>
 </section>
 <section class="location">
-    <h1>Můžete nás nalézt zde:</h1>
+    <h2>Můžete nás nalézt zde:</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1261.5766952322165!2d15.071767483747138!3d50.772730047586094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709341bff96f62b%3A0xd73b2559e2bb60d9!2sTUL%3A%20Fakulta%20mechatroniky%2C%20informatiky%20a%20mezioborov%C3%BDch%20studi%C3%AD!5e0!3m2!1scs!2scz!4v1677866365711!5m2!1scs!2scz"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 <div class="your-location">
-    <h1 class="status"></h1>
+    <h1 class="status">NaN</h1>
     <button class="find-state">Zjistit svojí polohu</button>
     <script src="js/geolocation.js"></script>
 </div>
 <hr class="line">
 <section class="contact-us">
+    <h2>Formulář</h2>
     <div class="contact-col">
         <form id="contact-form" onsubmit="return validateForm()">
             <fieldset>
