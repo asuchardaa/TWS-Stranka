@@ -51,7 +51,7 @@ header {
 .navbar {
     width: 100%;
     height: 60px;
-    max-width: 1200px;
+    max-width: 1700px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -469,6 +469,22 @@ header {
     }
 }
 
+.products-col a.odkaz2\"{
+    color: #f00;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.products-col a.odkaz2\":hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.products-text .odkaz:visited {
+    color: purple;
+}
+
 .products-text .odkaz:link {
     font-style: italic;
     font-weight: bold;
@@ -477,10 +493,6 @@ header {
     color: blue;
     font-size: 13px;
     margin-top: 20px;
-}
-
-.products-text .odkaz:visited {
-    color: purple;
 }
 
 .products-text .odkaz:hover {
@@ -641,16 +653,29 @@ hr {
 }
 
 /*---zahlavi----*/
-.zahlavi {
+.zapati {
     width: 100%;
     text-align: center;
-    padding: 30px 0;
+    padding: 30px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.zahlavi h4 {
+.zapati h3 {
     margin-bottom: 25px;
     margin-top: 20px;
     font-weight: 600;
+}
+
+.zapati p {
+    display: block;
+    margin: 0;
+}
+
+.ikony {
+    justify-content: center;
+    display: flex;
 }
 
 .fa-facebook, .fa-instagram, .fa-twitter, .fa-spotify, .fa-github {
@@ -660,10 +685,10 @@ hr {
     width: 30px;
     text-align: center;
     text-decoration: none;
-    border-radius: 50%
+    border-radius: 50%;
 }
 
-.fa-facebook:hover, .fa-instagram:hover, .fa-twitter:hover, .fa-spotify:hover, .fa-youtube:hover {
+.fa-facebook:hover, .fa-instagram:hover, .fa-twitter:hover, .fa-spotify:hover, .fa-github:hover {
     opacity: 0.7;
 }
 
@@ -673,15 +698,15 @@ hr {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 4rem;
-    padding: 4rem;
+    padding: 120px 0 140px 0;
     margin: 0 auto;
     width: max-content;
 }
 
 .card {
-    font-family: 'Heebo';
+    font-family: 'Heebo', serif;
     --bg-filter-opacity: 0.5;
     background-image: linear-gradient(rgba(0, 0, 0, var(--bg-filter-opacity)), rgba(0, 0, 0, var(--bg-filter-opacity))), var(--bg-img);
     height: 20em;
@@ -805,4 +830,47 @@ hr {
     .card {
         max-width: calc(100vw - 4rem);
     }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+    align-items: center;
+}
+
+.grid-container .logo {
+    max-width: 100%;
+    width: 80px;
+    animation: shake 2s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0); }
+    10% { transform: rotate(5deg); }
+    20% { transform: rotate(-5deg); }
+    30% { transform: rotate(4deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(3deg); }
+    60% { transform: rotate(-3deg); }
+    70% { transform: rotate(2deg); }
+    80% { transform: rotate(-2deg); }
+    90% { transform: rotate(1deg); }
+    100% { transform: rotate(0); }
+}
+
+.grid-container .logo:nth-child(odd) {
+    animation-play-state: paused;
+    animation-delay: 5s;
+}
+
+@media screen and (max-width: 768px) {
+    .grid-container .logo {
+        max-width: 80%;
+    }
+}
+
+.grid-container h1 {
+    margin: 0;
 }
