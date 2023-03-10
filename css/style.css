@@ -24,7 +24,7 @@ p {
     font-weight: 300;
 }
 
-.navbar ul li::after, .drop-menu ul li::after {
+.navbar ul li::after {
     content: '';
     width: 0;
     height: 2px;
@@ -34,7 +34,7 @@ p {
     transition: 1s;
 }
 
-.navbar ul li:hover::after, .drop-menu ul li:hover::after {
+.navbar ul li:hover::after {
     width: 100%;
 }
 
@@ -119,10 +119,16 @@ header {
 }
 
 .drop-menu li {
-    padding: 0.7rem;
+    padding: 0.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    list-style: none;
+}
+
+.drop-menu a {
+    color: white;
+    text-decoration: none;
 }
 
 
@@ -470,7 +476,7 @@ header {
     }
 }
 
-.products-col a.odkaz2\"{
+.products-col a.odkaz2\" {
     color: #ff4336;
     text-decoration: none;
     font-weight: 300;
@@ -850,17 +856,39 @@ hr {
 }
 
 @keyframes shake {
-    0% { transform: rotate(0); }
-    10% { transform: rotate(5deg); }
-    20% { transform: rotate(-5deg); }
-    30% { transform: rotate(4deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(3deg); }
-    60% { transform: rotate(-3deg); }
-    70% { transform: rotate(2deg); }
-    80% { transform: rotate(-2deg); }
-    90% { transform: rotate(1deg); }
-    100% { transform: rotate(0); }
+    0% {
+        transform: rotate(0);
+    }
+    10% {
+        transform: rotate(5deg);
+    }
+    20% {
+        transform: rotate(-5deg);
+    }
+    30% {
+        transform: rotate(4deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+    60% {
+        transform: rotate(-3deg);
+    }
+    70% {
+        transform: rotate(2deg);
+    }
+    80% {
+        transform: rotate(-2deg);
+    }
+    90% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
 }
 
 .grid-container .logo:nth-child(odd) {
