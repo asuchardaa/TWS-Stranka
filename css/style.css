@@ -419,7 +419,7 @@ header {
     margin-top: 20px;
 }
 
-.products-col h1 {
+.products-col h2 {
     padding-top: 0;
     font-size: 36px;
 }
@@ -994,7 +994,7 @@ hr {
     text-align: center;
 }
 
-.gallery h1 {
+.gallery h2 {
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 30px;
