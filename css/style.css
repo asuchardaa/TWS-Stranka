@@ -112,6 +112,7 @@ header {
     border-radius: 10px;
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
 }
 
 .drop-menu.open {
@@ -544,7 +545,7 @@ hr {
     justify-content: center;
     align-items: center;
     width: 80%;
-    margin: auto 380px;
+    margin: auto 20px;
     /*padding-top: 80px;*/
     /*padding-bottom: 80px;*/
     padding: 80px 0;
@@ -596,7 +597,6 @@ hr {
 @media (max-width: 768px) {
     .seznamy {
         flex-direction: column;
-        width: 40%;
         padding-top: 40px;
         padding-bottom: 40px;
         align-items: center;
@@ -614,18 +614,20 @@ hr {
     }
 
     .seznamy h3 {
-        padding-top: 50px;
+        padding-top: 20px;
+        font-size: 1.5rem;
+        padding-right: 50px;
     }
 
     .seznamy-sloupce ol li,
     .seznamy-sloupce ul li {
-        margin-left: 20px;
-        text-indent: -20px;
+        /*margin-left: 10px;*/
+        text-indent: -10px;
     }
 }
 
 .tabulka {
-    padding: 15px 5% 80px 5%;
+    padding: 40px 0;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -667,7 +669,8 @@ hr {
 
 @media only screen and (max-width: 600px) {
     .tabulka {
-        padding: 15px 5% 80px 5%;
+        padding: 30px 15px;
+        margin: auto;
     }
 
     .tabulka h4 {
@@ -682,22 +685,22 @@ hr {
 
     .tabulka th,
     .tabulka td {
-        font-size: 14px;
+        font-size: 10px;
         padding: 2px;
         margin: 0 auto;
     }
 
     .tabulka th {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .tabulka td {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .tabulka caption {
-        font-size: 20px;
-        padding: 5px;
+        font-size: 16px;
+        padding: 3px;
         margin: 0 auto;
     }
 }
@@ -932,6 +935,7 @@ hr {
     width: 80px;
     animation: shake 2s ease-in-out infinite;
     animation-delay: 0s;
+    z-index: 0;
 }
 
 @keyframes shake {
