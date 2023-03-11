@@ -698,18 +698,13 @@ hr {
 .zapati p {
     display: block;
     margin: 0;
+    font-size: 18px;
     justify-content: center;
-}
-
-.zapati a {
-
 }
 
 .zapati a.odkaz2 {
     color: #ff4336;
     text-decoration: none;
-    font-weight: 300;
-    font-size: 14px;
     justify-content: space-between;
 }
 
