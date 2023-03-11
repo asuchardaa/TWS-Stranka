@@ -1,5 +1,3 @@
 TODO LIST
 - .htaccess
-- POUZE odkazy na validace každého HTML do zápatí
-- validace CSS do zápatí indexu
 - online audit
