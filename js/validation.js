@@ -33,6 +33,8 @@ function validateForm() {
     const telefonValue = telefon.value.trim();
     const birthdayValue = birthday.value.trim();
     const zpravaValue = zprava.value.trim();
+    const today = new Date();
+    const inputDate = new Date(birthdayValue);
 
     let hasErrors = false;
 
@@ -68,6 +70,9 @@ function validateForm() {
 
     if (birthdayValue === "") {
         setErrorFor(birthday, "Datum narození nemůže být prázdné");
+        hasErrors = true;
+    } else if (inputDate >= today){
+        setErrorFor(birthday, "Nemohl ses narodit dnes nebo v budoucnu");
         hasErrors = true;
     } else {
         setSuccessFor(birthday);
