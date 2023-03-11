@@ -368,6 +368,8 @@ header {
     cursor: pointer;
     width: 100%;
     max-width: 150px;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-col input[type="submit"]:hover {
@@ -375,6 +377,14 @@ header {
     background: #cc0000;
     color: #fff;
     transition: 1.5s;
+}
+
+.contact-col p {
+    color: red;
+    font-size: 22px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {

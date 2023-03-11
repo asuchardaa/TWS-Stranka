@@ -1,16 +1,3 @@
-function setErrorFor(input, message) {
-    const formControl = input.parentElement;
-    const errorMessage = formControl.querySelector("small");
-
-    formControl.className = "form-control error";
-    errorMessage.innerText = message;
-}
-
-function setSuccessFor(input) {
-    const formControl = input.parentElement;
-    formControl.className = "form-control success";
-}
-
 function isEmail(email) {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
@@ -21,73 +8,50 @@ function isPhoneNumber(phoneNumber) {
     return re.test(phoneNumber);
 }
 
-function validateForm() {
-    const jmeno = document.getElementById("jmeno");
-    const email = document.getElementById("email");
-    const telefon = document.getElementById("telefon");
-    const birthday = document.getElementById("birthday");
-    const zprava = document.getElementById("zprava");
-
-    const jmenoValue = jmeno.value.trim();
-    const emailValue = email.value.trim();
-    const telefonValue = telefon.value.trim();
-    const birthdayValue = birthday.value.trim();
-    const zpravaValue = zprava.value.trim();
-    const today = new Date();
-    const inputDate = new Date(birthdayValue);
-
-    let hasErrors = false;
-
-    if (jmenoValue === "") {
-        setErrorFor(jmeno, "Jméno nemůže být prázdné");
-        hasErrors = true;
-    } else if (jmenoValue.length < 2) {
-        setErrorFor(jmeno, "Jméno musí být alespoň 2 znaky dlouhé");
-        hasErrors = true;
-    } else {
-        setSuccessFor(jmeno);
-    }
-
-    if (emailValue === "") {
-        setErrorFor(email, "Email nemůže být prázdný");
-        hasErrors = true;
-    } else if (!isEmail(emailValue)) {
-        setErrorFor(email, "Zadejte platný email");
-        hasErrors = true;
-    } else {
-        setSuccessFor(email);
-    }
-
-    if (telefonValue === "") {
-        setErrorFor(telefon, "Telefon nemůže být prázdný");
-        hasErrors = true;
-    } else if (!isPhoneNumber(telefonValue)) {
-        setErrorFor(telefon, "Zadejte platné telefonní číslo");
-        hasErrors = true;
-    } else {
-        setSuccessFor(telefon);
-    }
-
-    if (birthdayValue === "") {
-        setErrorFor(birthday, "Datum narození nemůže být prázdné");
-        hasErrors = true;
-    } else if (inputDate >= today){
-        setErrorFor(birthday, "Nemohl ses narodit dnes nebo v budoucnu");
-        hasErrors = true;
-    } else {
-        setSuccessFor(birthday);
-    }
-
-    if (zpravaValue === "") {
-        setErrorFor(zprava, "Zpráva nemůže být prázdná");
-        hasErrors = true;
-    } else {
-        setSuccessFor(zprava);
-    }
-
-    if (hasErrors) {
-        alert("Prosím, vyplňte formulář správně");
-    } else {
-        alert("Formulář byl úspěšně odeslán");
-    }
+function isValidDate(dateString) {
+    const dateObject = new Date(dateString);
+    return !isNaN(dateObject.getTime()) && dateObject <= currDate;
 }
+
+const currDate = new Date();
+const jmeno = document.getElementById("jmeno");
+const email = document.getElementById("email");
+const telefon = document.getElementById("telefon");
+const birthday = document.getElementById("birthday");
+const zprava = document.getElementById("zprava");
+const form = document.querySelector("form");
+const errorMessage = document.querySelector(".errorMessage");
+
+form.addEventListener("submit", (e) => {
+    const errors = [];
+
+    if (jmeno.value.trim() === "") {
+        errors.push("Jméno je vyžadováno");
+    } else if (jmeno.value.trim().length < 3) {
+        errors.push("Jméno musí být delší jak 3 znaky");
+    }
+
+    if (!isEmail(email.value)) {
+        errors.push("Zadejte platnou e-mailovou adresu.");
+    }
+
+    if (!isPhoneNumber(telefon.value)) {
+        errors.push("Zadejte platné telefonní číslo ve formátu xxx-xxx-xxx.");
+    }
+
+    if (birthday.value.trim() === "") {
+        errors.push("Zadejte datum narození.");
+    } else if (!isValidDate(birthday.value)) {
+        errors.push("Datum narození musí být v platném formátu (yyyy-mm-dd) a musí být v minulosti nebo dnes.");
+    }
+
+    if (zprava.value.trim() === "") {
+        errors.push("Zadejte prosím zprávu.");
+    }
+
+    if (errors.length > 0) {
+        e.preventDefault();
+        errorMessage.hidden = false;
+        errorMessage.innerHTML = errors.join('<br>');
+    }
+});

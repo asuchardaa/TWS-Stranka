@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/53c596c8c0.js" crossorigin="anonymous"></script>
+    <script defer src="./js/validation.js"></script>
 </head>
 <body>
 <section class="sub-header">
@@ -59,20 +60,21 @@
 <section class="contact-us">
     <h2>Formulář</h2>
     <div class="contact-col">
-        <form id="contact-form" onsubmit="return validateForm()">
+        <form id="contact-form" action="/" method="GET">
             <fieldset>
                 <legend>Kontaktuj nás</legend>
                 <label for="jmeno">Jméno:</label>
-                <input type="text" id="jmeno" name="jmeno" required minlength="2" maxlength="50" placeholder="Zadej své jméno"><br><br>
+                <input type="text" id="jmeno" name="jmeno" placeholder="Zadej své jméno" required/><br><br>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Zadej svůj email"><br><br>
+                <input type="email" id="email" name="email" placeholder="Zadej svůj email" required/><br><br>
                 <label for="telefon">Telefon (000-000-000):</label>
-                <input type="tel" name="telefon" id="telefon" required placeholder="Zadej svůj telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"><br><br>
+                <input type="tel" name="telefon" id="telefon" placeholder="Zadej svůj telefon"/><br><br>
                 <label for="birthday">Datum narození:</label><br>
-                <input type="date" id="birthday" name="birthday" required min="1900-01-01" max="2023-03-31"><br><br>
+                <input type="date" id="birthday" name="birthday"/><br><br>
                 <label for="zprava">Zpráva:</label>
                 <textarea id="zprava" name="zprava" rows="8" placeholder="Zpráva..."
                           required></textarea><br><br>
+                <p class="errorMessage" hidden></p>
                 <input type="submit" class="hero-btn" value="Odeslat">
             </fieldset>
         </form>
@@ -93,7 +95,6 @@
     </div>
     <p>© 2023 Adam Sucharda</p>
 </section>
-<script src="./js/validation.js"></script>
 <script src="./js/drop_menu.js"></script>
 </body>
 </html>
