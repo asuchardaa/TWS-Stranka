@@ -435,16 +435,27 @@ header {
 }
 
 .products-text .hero-btn {
-    display: inline-block;
+    display: flex;
     text-decoration: none;
     font-style: normal;
     color: #ff4336;
     border: 1px solid #ff4336;
-    padding: 12px 34px;
-    font-size: 13px;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: bold;
     background: transparent;
     position: relative;
     cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.products-text .hero-btn a {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    justify-content: center;
 }
 
 .products-text .hero-btn:hover {
@@ -514,8 +525,8 @@ header {
     display: inline-block;
     text-decoration: none;
     color: #ff4336;
-    font-size: 14px;
-    margin-top: 20px;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 .products-text .odkaz:hover {
