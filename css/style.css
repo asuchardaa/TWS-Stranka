@@ -80,7 +80,7 @@ header {
 .action_btn {
     background-color: #ff4436;
     color: #fff;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 1rem;
     border: none;
     outline: none;
     border-radius: 20px;
@@ -727,6 +727,7 @@ hr {
     font-size: 18px;
     justify-content: center;
     text-align: center;
+    font-weight: bold;
 }
 
 .zapati a.odkaz2 {
@@ -735,6 +736,7 @@ hr {
     justify-content: center;
     align-items: center;
     margin-top: 15px;
+    font-weight: bold;
 }
 
 .zapati  a.odkaz2:hover {
