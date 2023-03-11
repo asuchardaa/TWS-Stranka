@@ -429,7 +429,7 @@ header {
 
 .products-col p {
     padding: 15px 0 35px;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 14px;
     justify-content: space-between;
 }
@@ -491,7 +491,7 @@ header {
 .products-col a.odkaz2 {
     color: #ff4336;
     text-decoration: none;
-    font-weight: 300;
+    font-weight: bold;
     font-size: 14px;
     justify-content: space-between;
 }
@@ -501,11 +501,11 @@ header {
 }
 
 .products-col a.odkaz2:visited {
-    color: violet;
+    color: #ff4336;
 }
 
 .products-text .odkaz:visited {
-    color: violet;
+    color: #ff4336;
 }
 
 .products-text .odkaz:link {
@@ -514,7 +514,7 @@ header {
     display: inline-block;
     text-decoration: none;
     color: #ff4336;
-    font-size: 13px;
+    font-size: 14px;
     margin-top: 20px;
 }
 
