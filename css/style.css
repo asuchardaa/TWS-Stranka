@@ -554,20 +554,20 @@ hr {
 /*---SEZNAMY---*/
 .seznamy {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     width: 80%;
-    margin: auto 20px;
-    /*padding-top: 80px;*/
-    /*padding-bottom: 80px;*/
-    padding: 80px 0;
+    margin: 0 auto;
+    padding: 80px 0 50px;
 }
 
 .seznamy-sloupce {
-    width: 45%;
+    width: 30%;
     justify-content: center;
     display: flex;
     flex-direction: column;
+    /*padding: 30px 2px;*/
+    /*margin: 0 50px 0 0;*/
 }
 
 .seznamy-sloupce ol, .seznamy-sloupce ul {
@@ -579,8 +579,6 @@ hr {
 
 .seznamy h3 {
     margin: 0 auto 20px;
-    /*text-align: center;*/
-    padding-right: 450px;
 }
 
 .seznamy-sloupce ol li {
@@ -628,7 +626,6 @@ hr {
     .seznamy h3 {
         padding-top: 20px;
         font-size: 1.5rem;
-        padding-right: 50px;
     }
 
     .seznamy-sloupce ol li,
@@ -639,14 +636,13 @@ hr {
 }
 
 .tabulka {
-    padding: 40px 0;
+    padding: 50px 0;
     max-width: 600px;
     margin: 0 auto;
 }
 
 .tabulka h4 {
     text-align: center;
-    margin-top: 40px;
     margin-bottom: 20px;
     font-size: 2.5rem;
 }
@@ -681,8 +677,8 @@ hr {
 
 @media only screen and (max-width: 600px) {
     .tabulka {
-        padding: 30px 15px;
-        margin: auto;
+        padding: 40px 0px;
+        margin: 0 auto;
     }
 
     .tabulka h4 {
