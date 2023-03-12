@@ -5,5 +5,5 @@
 5) Rozšířené vlastnosti z CSS3 (animace, přechodové efekty, transformace, nové vlastnosti, vlastní fonty) (1 - 15 bodů) -> ANO - animace, přechodové efekty, transformace, nové vlastnosti, nahraný a vybraný font
 6) Pokročilá responzivita CSS (širší škála podporovaných rozlišení, responzivní média, ...)  (1 - 15 bodů) -> ANO - Responzivní pomocí Media queries (pro mobily, tablety a notebooky)
 7) Využití vloženého SVG v HTML nebo CSS (1 - 5 bodů) -> Ano, viz hlavní stránka.
-8) Konfigurace serveru pomocí .htaccess (chybové stránky, přesměrování, heslo, omezení na základě IP adres) (1 - 10 bodů)
+8) Konfigurace serveru pomocí .htaccess (chybové stránky, přesměrování, heslo, omezení na základě IP adres) (1 - 10 bodů) - Pouze chybové stránky
 9) Klientský JavaScript (přepínání CSS, geolokace, rozšířená validace formuláře, ...) (1 - 10 bodů) - ANO -> geolokace, rozšířená validace formuláře, drop-menu
