@@ -1112,3 +1112,7 @@ figcaption audio {
         padding: 10px;
     }
 }
+
+.error-container {
+    padding: 150px 150px;
+}
