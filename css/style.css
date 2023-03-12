@@ -757,17 +757,17 @@ hr {
     font-weight: bold;
 }
 
-.zapati  a.odkaz2:hover {
+.zapati a.odkaz2:hover {
     text-decoration: underline;
 }
 
-.zapati  a.odkaz2:visited {
+.zapati a.odkaz2:visited {
     color: #cc0000;
     font-weight: bold;
 
 }
 
-.zapati  a.odkaz:visited {
+.zapati a.odkaz:visited {
     color: #cc0000;
 }
 
@@ -918,6 +918,13 @@ hr {
     margin-left: 1rem;
 }
 
+@media screen and (max-width: 1440px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr 1fr;
+        padding: 100px 0 120px 0;
+    }
+}
+
 @media screen and (max-width: 1285px) {
     .cards-wrapper {
         grid-template-columns: 1fr 1fr;
@@ -927,6 +934,7 @@ hr {
 @media screen and (max-width: 900px) {
     .cards-wrapper {
         grid-template-columns: 1fr;
+        padding: 80px 0 100px 0;
     }
 
     .card-grid-space .num {
